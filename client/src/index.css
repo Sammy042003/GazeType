@@ -1,0 +1,38 @@
+/* These three directives are placeholders that Tailwind replaces at build time:
+   - base       : Tailwind's CSS reset + sensible defaults
+   - components : reusable component classes (and @apply targets)
+   - utilities  : the huge set of utility classes (bg-gray-950, flex, p-4, ...) */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===========================================================================
+   Warm, Monkeytype-inspired theme. This is the SINGLE SOURCE OF TRUTH for the
+   app's colors — every component references these via Tailwind arbitrary values
+   like bg-[var(--surface)] or text-[var(--accent)]. Change a value here and the
+   whole app recolors.
+   =========================================================================== */
+:root {
+  --bg: #2a2724; /* warm dark page background */
+  --surface: #34302c; /* cards, inputs, keys */
+  --hover: #403a34; /* raised / hovered surface */
+  --border: #4a443d; /* subtle warm borders */
+  --muted: #8c8378; /* muted text (untyped chars, labels) */
+  --text: #e9e2d5; /* primary warm off-white text */
+  --accent: #e2b714; /* amber accent (Monkeytype signature) */
+  --accent-hover: #f2cd45; /* brighter amber for hover */
+  --error: #e0685c; /* warm red */
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    @apply h-full;
+  }
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    @apply antialiased;
+  }
+}

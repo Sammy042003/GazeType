@@ -1,0 +1,14 @@
+{
+  "name": "gazetype",
+  "version": "1.0.0",
+  "private": true,
+  "description": "GazeType — gaze-aware typing trainer (root launcher for client + server)",
+  "scripts": {
+    "dev": "concurrently -n server,client -c blue,magenta \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client && npm run build --prefix server"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^10.0.0"
+  }
+}
