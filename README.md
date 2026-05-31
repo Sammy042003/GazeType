@@ -331,8 +331,4 @@ Pushing to `main` auto-redeploys both.
 - **Desktop-focused:** designed for a keyboard + webcam; not optimized for mobile.
 - **Gaze tuning:** detection thresholds are calibrated constants and may need adjusting per camera/lighting.
 
----
 
-## License
-
-MIT
